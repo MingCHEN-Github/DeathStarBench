@@ -175,7 +175,16 @@ $ helm upgrade social-net3 ./socialnetwork \
 --set global.resources.limits.memory=128Mi \
 --set global.resources.limits.cpu=200m \
 
-
+helm upgrade social-net3 ./socialnetwork \
+--namespace social-network3 \
+--set global.resources.requests.memory=128Mi \
+--set global.resources.requests.cpu=200m \
+--set global.resources.limits.memory=256Mi \
+--set global.resources.limits.cpu=400m \
+--set jaeger.container.resources.requests.memory= 1024Mi \
+--set jaeger.container.resources.requests.cpu=500m \
+--set jaeger.container.resources.limits.memory= 2048 Mi \
+--set jaeger.container.resources.limits.cpu=1000m
 
 If one resources key is not specified, the value is retrieved from global values (which can be overriden during deployment).
 
