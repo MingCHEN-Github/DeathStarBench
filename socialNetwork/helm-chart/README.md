@@ -159,13 +159,13 @@ $ helm install RELEASE_NAME HELM_CHART_REPO_PATH \
 $ helm install RELEASE_NAME HELM_CHART_REPO_PATH \
 --namespace YOUR_NAMESPACE \
 --set global.resources.requests.memory=64Mi \
---set global.resources.requests.cpu=250m \
---set global.resources.limits.memory=128Mi \
---set global.resources.limits.cpu=2 \
+--set global.resources.requests.cpu=150m \
+--set global.resources.limits.memory=256Mi \
+--set global.resources.limits.cpu=300m \
 --set compose-post-service.container.resources.requests.memory=64Mi \
---set compose-post-service.container.resources.requests.cpu=500m \
---set compose-post-service.container.resources.limits.memory=128Mi \
---set compose-post-service.container.resources.limits.cpu=4
+--set compose-post-service.container.resources.requests.cpu=300m \
+--set compose-post-service.container.resources.limits.memory=256Mi \
+--set compose-post-service.container.resources.limits.cpu=500m
 
 > **Alternatively upgrade**: Upgrade existing RELEASE via helm upgrade:\
 $ helm upgrade social-net3 ./socialnetwork \
