@@ -168,7 +168,7 @@ $ helm install RELEASE_NAME HELM_CHART_REPO_PATH \
 --set compose-post-service.container.resources.limits.cpu=500m
 
 > **Alternatively upgrade**: Upgrade existing RELEASE via helm upgrade:\
-
+```
 helm install social-net1 socialnetwork \
 --namespace social-network \
 --set global.resources.requests.memory=128Mi \
@@ -179,14 +179,16 @@ helm install social-net1 socialnetwork \
 --set jaeger.container.resources.requests.cpu=500m \
 --set jaeger.container.resources.limits.memory=2048Mi \
 --set jaeger.container.resources.limits.cpu=1000m
+```
 
-$ helm upgrade social-net3 socialnetwork \
+```
+$ helm upgrade social-net1 socialnetwork \
 --namespace social-network3 \
 --set global.resources.requests.memory=128Mi \
 --set global.resources.requests.cpu=200m \
 --set global.resources.limits.memory=256Mi \
---set global.resources.limits.cpu=400m \
-s
+--set global.resources.limits.cpu=400m 
+```
 
 If one resources key is not specified, the value is retrieved from global values (which can be overriden during deployment).
 
