@@ -183,7 +183,7 @@ helm install social-net1 socialnetwork \
 
 ```
 $ helm upgrade social-net1 socialnetwork \
---namespace social-network3 \
+--namespace social-network1 \
 --set global.resources.requests.memory=128Mi \
 --set global.resources.requests.cpu=200m \
 --set global.resources.limits.memory=256Mi \
