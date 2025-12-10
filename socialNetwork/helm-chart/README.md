@@ -171,10 +171,10 @@ $ helm install RELEASE_NAME HELM_CHART_REPO_PATH \
 ```
 helm install social-net1 socialnetwork \
 --namespace social-network \
---set global.resources.requests.memory=128Mi \
---set global.resources.requests.cpu=200m \
---set global.resources.limits.memory=256Mi \
---set global.resources.limits.cpu=400m \
+--set global.resources.requests.memory=256Mi \
+--set global.resources.requests.cpu=400m \
+--set global.resources.limits.memory=512Mi \
+--set global.resources.limits.cpu=800m \
 --set jaeger.container.resources.requests.memory=1024Mi \
 --set jaeger.container.resources.requests.cpu=500m \
 --set jaeger.container.resources.limits.memory=2048Mi \
